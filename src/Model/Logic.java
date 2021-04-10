@@ -166,6 +166,13 @@ public class Logic {
 	public ArrayList<Circulo> getCirculos() {
 		return circulos;
 	}
+	public ArrayList<Cuadrado> getCuadrados() {
+		return cuadrados;
+	}
+	
+	public ArrayList<Triangulo> getTriangulos() {
+		return triangulos;
+	}
 	public int prueba() {
 		return prueba;
 	} 

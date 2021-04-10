@@ -58,4 +58,10 @@ int valor;
 	public int getValor() {
 		return valor;
 	}
+	public void setDirX(int dirX) {
+		this.dirX = dirX;
+	}
+	public void setDirY(int dirY) {
+		this.dirY = dirY;
+	}
 }
