@@ -1,12 +1,13 @@
 package View;
 
 
+
 import processing.core.PApplet;
 
 public class Main extends PApplet{
 	
 	public static void main(String[] args) {
-		PApplet.main("Main");
+		PApplet.main("View.Main");
 	}
 	
 	@Override
@@ -16,14 +17,14 @@ public class Main extends PApplet{
 		 
 	}
 	
+	 Logic logica;
 	
-
 	
 	
 	@Override
 	public void setup() {
+		
 	
-		  
 	}
 	
 @Override
