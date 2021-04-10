@@ -40,7 +40,8 @@ public class Controller {
 	public void pararMovimiento(int mouseX, int mouseY) {
 		for(int i = 0;  i < logica.getCirculos().size();i++) {
 			Circulo actual = logica.getCirculos().get(i);
-			if(PApplet.dist(mouseY, mouseY, actual.getPosX(),actual.getPosY())<actual.getTam()) {
+			if(actual.getPosX()-actual.getTam()/2<mouseX&&actual.getPosX()+actual.getTam()/2>mouseX
+					&& actual.getPosY()-actual.getTam()/2<mouseY&&actual.getPosY()+actual.getTam()/2>mouseY) {
 				if(actual.getDirX() != 0 && actual.getDirY()!= 0) {actual.setDirX(0); actual.setDirY(0);}
 				else { actual.setDirX(-1); actual.setDirY(1);}
 				}}

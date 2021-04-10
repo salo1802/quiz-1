@@ -23,6 +23,7 @@ int valor;
 	}
 	
 	public void bordes() {
+		//colisiones con bordes
 		if(posX-tam/2<0) {
 			dirX = 1;
 		}
@@ -31,11 +32,11 @@ int valor;
 			dirY = 1;
 		}
 		
-		if(posX+tam/2>500) {
+		if(posX+tam/2>900) {
 			dirX = -1 ;
 		}
 		
-		if(posY+tam/2>350) {
+		if(posY+tam/2>600) {
 			dirY = -1;
 		}
 	}

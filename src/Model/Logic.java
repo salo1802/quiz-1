@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import processing.core.PApplet;
 
 public class Logic {
-	private String compCir;
-	private String compCua;
 	private String[] texto;
 	private String[] lineas;
 	private ArrayList <String> palabras;
@@ -20,7 +18,6 @@ public class Logic {
 		circulos = new ArrayList<>();
 		cuadrados = new ArrayList<>();
 		triangulos = new ArrayList<>();
-		compCir= " Circulo";
 		prueba = 0;
 	}
 	

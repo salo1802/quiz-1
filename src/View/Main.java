@@ -14,7 +14,7 @@ public class Main extends PApplet{
 	
 	@Override
 	public void settings() {
-		size(500,350);
+		size(900,600);
 		 
 		 
 	}
@@ -28,6 +28,7 @@ public class Main extends PApplet{
 	public void setup() {
 		textAlign(CENTER,CENTER);
 		rectMode(CENTER);
+		ellipseMode(CENTER);
 		controller = new Controller(this);
 		
 		
@@ -36,17 +37,10 @@ public class Main extends PApplet{
 @Override
 public void draw() {
 	background(255);
-	controller.Draw(this);
-	
-	
-	
-	
-     
-     
-
-     
-    
+	controller.Draw(this); 
 	}
+
+
 @Override
 public void mousePressed() {
 	controller.pararMovimiento(mouseX, mouseY);
