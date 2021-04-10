@@ -3,6 +3,7 @@ package View;
 
 
 
+import Controller.Controller;
 import processing.core.PApplet;
 
 public class Main extends PApplet{
@@ -18,7 +19,7 @@ public class Main extends PApplet{
 		 
 	}
 	
-	
+	Controller controller;
 	
 	
 	
@@ -27,6 +28,7 @@ public class Main extends PApplet{
 	public void setup() {
 		textAlign(CENTER,CENTER);
 		rectMode(CENTER);
+		controller = new Controller(this);
 		
 		
 	}
@@ -34,6 +36,7 @@ public class Main extends PApplet{
 @Override
 public void draw() {
 	background(255);
+	controller.Draw(this);
 	
 	
 	
@@ -46,7 +49,9 @@ public void draw() {
 	}
 @Override
 public void mousePressed() {
-
+	controller.pararMovimiento(mouseX, mouseY);
+	if(mouseButton==RIGHT) {
+	controller.NuevaFigura(mouseX, mouseY);}
 }
  }
 
