@@ -2,7 +2,9 @@ package View;
 
 
 
-import Model.Figura;
+
+
+
 import processing.core.PApplet;
 
 public class Main extends PApplet{
@@ -18,21 +20,22 @@ public class Main extends PApplet{
 		 
 	}
 	
-	 
-	Figura prueba;
+	
+	
 	
 	
 	@Override
 	public void setup() {
-		prueba = new Figura(50,450,300,-1,15);
+		textAlign(CENTER,CENTER);
+		rectMode(CENTER);
+	
 	
 	}
 	
 @Override
 public void draw() {
-	circle(prueba.getPosX(),prueba.getPosY(), prueba.getTam());
-	prueba.bordes();
-	prueba.mover();
+	background(255);
+	
 	
 	  
      
