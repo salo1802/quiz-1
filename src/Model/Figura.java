@@ -55,4 +55,7 @@ int valor;
 	public int getTam() {
 		return tam;
 	}
+	public int getValor() {
+		return valor;
+	}
 }

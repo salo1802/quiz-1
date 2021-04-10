@@ -88,6 +88,77 @@ public class Logic {
 		}
 	}
 	
+	public void fusiones(PApplet app) {
+		
+		boolean colision = false;
+		int masGrande = 0;
+		//colision de cuadrado con circulo
+		for(int i=0; i < cuadrados.size();i++ ) {
+			Cuadrado actual1 = cuadrados.get(i);
+			for(int j = 0;j < circulos.size();j++) {
+			Circulo actual2 = circulos.get(j);
+			if(PApplet.dist(actual1.getPosX(),actual1.getPosY(),actual2.getPosX(),actual2.getPosY())<actual2.getTam()) {
+				colision = true;}
+				if(colision==true) {
+				int tam = actual1.getTam()+actual2.getTam();
+				int posX = (actual1.getPosX()+actual2.getPosX())/2;
+				int posY = (actual1.getPosY()+actual2.getPosY())/2;
+				int dir = 1;
+				int valor = actual1.getValor()+actual2.getValor();
+				Triangulo nuevotriangulo = new Triangulo(tam, posX, posY, dir, valor);
+				triangulos.add(nuevotriangulo);
+				circulos.remove(actual2);
+				cuadrados.remove(actual1);
+				colision = false;
+			}}}
+		//colision de cuadrados con cuadrados
+		for(int i=0;i < cuadrados.size();i++) {
+			for(int j=1;j < cuadrados.size();j++) {
+			Cuadrado actual1 = cuadrados.get(i);
+			Cuadrado actual2 = cuadrados.get(j);
+			if(actual1.getTam()>actual2.getTam()) {masGrande = actual1.getTam();}
+			if(actual1.getTam()<actual2.getTam()) {masGrande = actual2.getTam();
+			if(PApplet.dist(actual1.getPosX(),actual1.getPosY(),actual2.getPosX(),actual2.getPosY())< masGrande) {
+				colision = true;}
+				if(colision==true) {
+				int tam = actual1.getTam()+actual2.getTam();
+				int posX = (actual1.getPosX()+actual2.getPosX())/2;
+				int posY = (actual1.getPosY()+actual2.getPosY())/2;
+				int dir = 1;
+				int valor = actual1.getValor()+actual2.getValor();
+				Triangulo nuevotriangulo = new Triangulo(tam, posX, posY, dir, valor);
+				triangulos.add(nuevotriangulo);
+				cuadrados.remove(actual2);
+				cuadrados.remove(actual1);
+				colision = false;
+			}}}}
+		//colision entre circulos
+		
+		for(int i=0;i < circulos.size();i++) {
+			for(int j=1;j < circulos.size();j++) {
+			Circulo actual1 = circulos.get(i);
+			Circulo actual2 = circulos.get(j);
+			if(actual1.getTam()>actual2.getTam()) {masGrande = actual1.getTam();}
+			if(actual1.getTam()<actual2.getTam()) {masGrande = actual2.getTam();
+			if(PApplet.dist(actual1.getPosX(),actual1.getPosY(),actual2.getPosX(),actual2.getPosY())< masGrande) {
+				colision = true;}
+				if(colision==true) {
+				int tam = actual1.getTam()+actual2.getTam();
+				int posX = (actual1.getPosX()+actual2.getPosX())/2;
+				int posY = (actual1.getPosY()+actual2.getPosY())/2;
+				int dir = 1;
+				int valor = actual1.getValor()+actual2.getValor();
+				Triangulo nuevotriangulo = new Triangulo(tam, posX, posY, dir, valor);
+				triangulos.add(nuevotriangulo);
+				circulos.remove(actual2);
+				circulos.remove(actual1);
+				colision = false;
+			}}}}
+		
+	}
+	
+	
+	
 	public ArrayList<String> getPalabras() {
 		return palabras;
 	}
