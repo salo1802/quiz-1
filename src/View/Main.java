@@ -2,9 +2,7 @@ package View;
 
 
 
-
-
-
+import Model.Logic;
 import processing.core.PApplet;
 
 public class Main extends PApplet{
@@ -15,11 +13,12 @@ public class Main extends PApplet{
 	
 	@Override
 	public void settings() {
-		size(900,600);
+		size(500,350);
 		 
 		 
 	}
 	
+	Logic logica;
 	
 	
 	
@@ -28,16 +27,19 @@ public class Main extends PApplet{
 	public void setup() {
 		textAlign(CENTER,CENTER);
 		rectMode(CENTER);
-	
-	
+		logica = new Logic();
+		logica.cargarTXT(this);
+		logica.crearListas(this);
+		logica.crearFiguras();
+		
 	}
 	
 @Override
 public void draw() {
 	background(255);
+	logica.pintarFiguras(this);
 	
 	
-	  
      
      
 

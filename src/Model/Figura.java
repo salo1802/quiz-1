@@ -18,8 +18,8 @@ int valor;
 	
 	public void  mover () {
 		
-		posX += dirX*3;
-		posY += dirY*3;
+		posX += dirX;
+		posY += dirY;
 	}
 	
 	public void bordes() {
@@ -31,11 +31,11 @@ int valor;
 			dirY = 1;
 		}
 		
-		if(posX+tam/2>900) {
+		if(posX+tam/2>500) {
 			dirX = -1 ;
 		}
 		
-		if(posY+tam/2>600) {
+		if(posY+tam/2>350) {
 			dirY = -1;
 		}
 	}
