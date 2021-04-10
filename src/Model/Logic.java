@@ -29,9 +29,6 @@ public class Logic {
 		}}
 	}
 
-	/*public ArrayList<String> getPalabras() {
-		return palabras;
-	}*/
 	
 	public ArrayList<String> getPalabras() {
 		return palabras;
