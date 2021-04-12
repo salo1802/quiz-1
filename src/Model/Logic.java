@@ -11,14 +11,13 @@ public class Logic {
 	private ArrayList <Circulo> circulos;
 	private ArrayList <Cuadrado> cuadrados;
 	private ArrayList <Triangulo> triangulos;
-	public int prueba;
 	
 	public Logic(){
 		palabras = new ArrayList<>();
 		circulos = new ArrayList<>();
 		cuadrados = new ArrayList<>();
 		triangulos = new ArrayList<>();
-		prueba = 0;
+
 	}
 	
 
@@ -48,7 +47,7 @@ public class Logic {
 				int valor = Integer.parseInt(palabras.get(index+5));
 				Cuadrado nuevoCuadrado = new Cuadrado(tam, posX, posY, dir, valor);
 				cuadrados.add(nuevoCuadrado);
-				prueba++;
+				;
 			}
 		
 			if (palabras.get(i).equals("Circulo")) {	
@@ -60,7 +59,7 @@ public class Logic {
 				int valor = Integer.parseInt(palabras.get(index+5));
 				Circulo nuevoCirculo = new Circulo(tam, posX, posY, dir, valor);
 				circulos.add(nuevoCirculo);
-				prueba++;}}}
+				}}}
 
 	public void pintarFiguras (PApplet app) {
 		for (int i = 0; i < cuadrados.size(); i++) {
@@ -170,7 +169,5 @@ public class Logic {
 	public ArrayList<Triangulo> getTriangulos() {
 		return triangulos;
 	}
-	public int prueba() {
-		return prueba;
-	} 
+	
 }
